@@ -1,0 +1,29 @@
+# Dependencies
+node_modules/
+
+# Build artifacts dirty trees
+dist/
+build/
+.vite/
+
+# Test output
+coverage/
+
+# Env vars
+.env
+.env.*
+!.env.example
+
+# Logs
+*.log
+npm-debug.log*
+
+# Editors
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# os
+.DS_Store
+Thumbs.db
