@@ -10,14 +10,25 @@
     "apps/*"
   ],
   "scripts": {
-    "dev": "concurrently --names web,api --prefix-colors cyan,green \"npm run dev --workspace @yacrm/web\" \"npm run dev --workspace @yacrm/api\"",
+    "dev": "concurrently --names web,api --prefix-colors cyan,green npm run dev --workspace @yacrm/web npm run dev --workspace @yacrm/api",
     "dev:web": "npm run dev --workspace @yacrm/web",
     "dev:api": "npm run dev --workspace @yacrm/api",
     "build": "npm run build --workspaces --if-present",
-    "typecheck": "npm run typecheck --workspaces --if-present"
+    "typecheck": "npm run typecheck --workspaces --if-present",
+    "lint": "npm run lint --workspaces --if-present",
+    "format": "prettier --write .",
+    "format:check": "prettier --check ."
   },
   "devDependencies": {
-    "concurrently": "^10.0.5"
+    "@eslint/js": "^10.0.1",
+    "concurrently": "^10.0.5",
+    "eslint": "^10.9.1",
+    "eslint-config-prettier": "^10.1.8",
+    "eslint-plugin-react-hooks": "^7.1.1",
+    "eslint-plugin-react-refresh": "^0.5.5",
+    "globals": "^17.11.0",
+    "prettier": "^3.9.6",
+    "typescript-eslint": "^8.68.0"
   },
   "allowScripts": {
     "esbuild@0.28.2": true
