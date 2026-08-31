@@ -7,7 +7,9 @@ Yet another CRM: a full-stack app for managing customers, leads, notes, and sale
 YaCRM is under construction rn - go around.
 
 ## Planned Stack
+
 <!-- time for me to grow up and learn webdev -->
+
 - React
 - TypeScript
 - Node.js

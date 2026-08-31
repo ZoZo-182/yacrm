@@ -22,5 +22,12 @@ export default defineConfig([
       globals: globals.node,
     },
   },
+  {
+    files: ["apps/web/src/**/*.{ts,tsx}"],
+    extends: [reactHooks.configs.flat.recommended, reactRefresh.configs.vite],
+    languageOptions: {
+      globals: globals.browser,
+    },
+  },
   eslintConfigPrettier,
 ]);
