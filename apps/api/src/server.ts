@@ -1,12 +1,12 @@
 import express from "express";
+import { env } from "./config/env.js";
 
 const app = express();
-const port = Number(process.env.PORT ?? 3000);
 
 app.use(express.json());
 
-const server = app.listen(port, () => {
-  console.log(`API listening on http://localhost:${port}`);
+const server = app.listen(env.PORT, () => {
+  console.log(`API listening on http://localhost:${env.PORT}`);
 });
 
 const shutdown = () => {
@@ -15,5 +15,5 @@ const shutdown = () => {
   });
 };
 
-process.on("SIGINT", shutdown);
-process.on("SIGTERM", shutdown);
+process.on("SIGINT", shutdown); // ctrl+c
+process.on("SIGTERM", shutdown); // signal apps may send
