@@ -5,6 +5,13 @@ const app = express();
 
 app.use(express.json());
 
+app.get("/api/health", (_request, response) => {
+  response.json({
+    status: "ok",
+    service: "yacrm-api",
+  });
+});
+
 const server = app.listen(env.PORT, () => {
   console.log(`API listening on http://localhost:${env.PORT}`);
 });

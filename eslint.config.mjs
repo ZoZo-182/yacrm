@@ -21,6 +21,14 @@ export default defineConfig([
     languageOptions: {
       globals: globals.node,
     },
+    rules: {
+      "@typescript-eslint/no-unused-vars": [
+        "error",
+        {
+          argsIgnorePattern: "^_",
+        },
+      ],
+    },
   },
   {
     files: ["apps/web/src/**/*.{ts,tsx}"],
